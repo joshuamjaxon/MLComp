@@ -1,0 +1,10 @@
+letdec(
+   funmatches([
+   funmatch('factorial',[
+      match(intpat(0)      ,int('1')      )      ,      match(idpat('n')      ,apply(id('*'),tuple([id('n')      ,apply(id('factorial'),apply(id('-'),tuple([id('n')      ,int('1')])))]))      )   ])
+   ])
+,
+   [
+apply(id('println'),apply(id('factorial'),int('5')))
+   ])
+.

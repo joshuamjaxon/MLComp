@@ -1,0 +1,48 @@
+Function: main/0
+    Function: factorial/1
+    Constants: None, 'Match Not Found', 0, 1
+    Locals: factorial@Param, n@1
+    FreeVars: factorial
+    Globals: print, fprint, input, int, len, type, Exception, funlist, concat
+    BEGIN
+        LOAD_FAST 0
+        LOAD_CONST 2
+        COMPARE_OP 2
+        POP_JUMP_IF_FALSE L0
+        LOAD_CONST 3
+        RETURN_VALUE
+L0:
+        LOAD_FAST 0
+        STORE_FAST 1
+        LOAD_FAST 1
+        LOAD_DEREF 0
+        LOAD_FAST 1
+        LOAD_CONST 3
+        BINARY_SUBTRACT
+        CALL_FUNCTION 1
+        BINARY_MULTIPLY
+        RETURN_VALUE
+L1:
+        LOAD_GLOBAL 6
+        LOAD_CONST 1
+        CALL_FUNCTION 1
+        RAISE_VARARGS 1
+    END
+Constants: None, 'Match Not Found', 0, code(factorial), 5
+CellVars: factorial
+Globals: print, fprint, input, int, len, type, Exception, funlist, concat
+BEGIN
+    LOAD_CLOSURE 0
+    BUILD_TUPLE 1
+    LOAD_CONST 3
+    MAKE_CLOSURE 0
+    STORE_DEREF 0
+    LOAD_GLOBAL 0
+    LOAD_DEREF 0
+    LOAD_CONST 4
+    CALL_FUNCTION 1
+    CALL_FUNCTION 1
+    POP_TOP
+    LOAD_CONST 0
+    RETURN_VALUE
+END
